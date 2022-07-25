@@ -121,7 +121,7 @@ class Stats():
 		self.saveMetrics(destroyed, migrations)
 		self.saveSchedulerInfo(selectedcontainers, decision, schedulingtime)
 
-	def runSimpleSimulation(self, decision):
+	def runSingleSimulation(self, decision):
 		host_alloc = []; container_alloc = [-1] * len(self.env.hostlist)
 		for i in range(len(self.env.hostlist)):
 			host_alloc.append([])
@@ -161,6 +161,29 @@ class Stats():
 			for cid in cids: ips += self.env.containerlist[cid].getApparentIPS()
 			energytotalinterval_pred += self.env.hostlist[hid].getPowerFromIPS(ips)
 		return energytotalinterval_pred*self.env.intervaltime, max(0, np.mean([metric_d['avgresponsetime'] for metric_d in self.metrics[-5:]]))
+
+		# Multiple SImlation
+
+		def runMultipleSimulation(self, decision): 
+			host_allocation = []; container_allocation = [-1] * len(self.env.hostlist)
+		for i in range(len(self.env.hostlist)):
+			host_allocation.append([])
+		for c in self.env.containerlist:
+			if c and c.getHostID() != -1: 
+				host_allocation[c.getHostID()].append(c.id) 
+				container_allocation[c.id] = c.getHostID()
+		decision = self.simulated_scheduler.filter_placement(decision)
+		for cid, hid in decision:
+			if self.env.getPlacementPossible(cid, hid) and container_allocation[cid] != -1:
+				host_allocation[container_allocation[cid]].remove(cid)
+				host_allocation[hid].append(cid)
+		energytotalinterval_prediction = 0
+		for hid, cids in enumerate(host_allocation):
+			ips = 0
+			for cid in cids: ips += self.env.containerlist[cid].getApparentIPS()
+			energytotalinterval_prediction += self.env.hostlist[hid].getPowerFromIPS(ips)
+		return energytotalinterval_prediction*self.env.intervaltime, max(0, np.mean([metric_d['avgresponsetime'] for metric_d in self.metrics[-5:]]))
+
 
 	########################################################################################################
 
