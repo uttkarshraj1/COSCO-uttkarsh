@@ -50,7 +50,7 @@ from scheduler.HGOBI import HGOBIScheduler
 from scheduler.HGOBI2 import HGOBI2Scheduler
 from scheduler.HSOGOBI import HSOGOBIScheduler
 from scheduler.HSOGOBI2 import HSOGOBI2Scheduler
-
+from scheduler.Single_Simulation import Single_Simulation
 # Auxiliary imports
 from stats.Stats import *
 from utils.Utils import *
@@ -67,11 +67,11 @@ opts, args = parser.parse_args()
 
 # Global constants
 NUM_SIM_STEPS = 100
-HOSTS = 10 * 5 if opts.env == '' else 10
+HOSTS = 10  if opts.env == '' else 10
 CONTAINERS = HOSTS
 TOTAL_POWER = 1000
 ROUTER_BW = 10000
-INTERVAL_TIME = 300 # seconds
+INTERVAL_TIME =  300 # seconds
 NEW_CONTAINERS = 0 if HOSTS == 10 else 5
 DB_NAME = ''
 DB_HOST = ''
@@ -103,7 +103,7 @@ def initalizeEnvironment(environment, logger):
 	
 	# Initialize scheduler
 	''' Can be LRMMTR, RF, RL, RM, Random, RLRMMTR, TMCR, TMMR, TMMTR, GA, GOBI (arg = 'energy_latency_'+str(HOSTS)) '''
-	scheduler = GOBIScheduler('energy_latency_'+str(HOSTS)) # GOBIScheduler('energy_latency_'+str(HOSTS))
+	scheduler = Single_Simulation()
 
 	# Initialize Environment
 	hostlist = datacenter.generateHosts()

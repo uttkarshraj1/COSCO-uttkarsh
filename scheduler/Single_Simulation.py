@@ -17,7 +17,10 @@ class Single_Simulation(Scheduler):
 
     def placement(self, containerIDs):
         decision = []
+
         for cid in containerIDs:
-            scores = [self.env.stats.runSimpleSimulation([(cid, hostID)])[0] for hostID, _ in enumerate(self.env.hostlist)]
+            scores = [self.env.stats.runSingleSimulation([(cid, hostID)])[0] for hostID, _ in enumerate(self.env.hostlist)]
             decision.append((cid, np.argmin(scores)))
+            # decision = np.clip(decision, minN, maxN)
+            # decision = select(decision).limit(1)
         return decision
