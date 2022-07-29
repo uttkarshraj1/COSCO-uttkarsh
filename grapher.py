@@ -23,11 +23,11 @@ import fnmatch
 from sys import argv
 
 plt.style.use(['science', 'ieee'])
-plt.rcParams["text.usetex"] = True
+plt.rcParams["text.usetex"] = False
 size = (2.9, 2.5)
-env = argv[1]
+env = ''
 option = 0
-sla_baseline = 'A3C'
+sla_baseline = 'singlesimulation'
 rot = 25
 if len(argv) >= 3:
 	rot = 15
@@ -70,16 +70,11 @@ def mean_confidence_interval(data, confidence=0.90):
     h = scipy.stats.sem(a) * scipy.stats.t.ppf((1 + confidence) / 2., n-1)
     return h
 
-PATH = 'all_datasets/' + env + '/'
+PATH = 'logs/' + env + '/'
 SAVE_PATH = 'results/' + env + '/'
 
-Models = ['GOBI*', 'GOBI', 'A3C', 'GA', 'DQLCM', 'POND', 'LR-MMT', 'MAD-MC'] 
-if option == 1:
-	rot = 90
-	Models = ['GOSH*', 'GOSH', 'SGOBI*', 'SGOBI', 'HGOBI*', 'HGOBI', 'GOBI*', 'GOBI', 'HGP', 'A3C', 'POND']
-	# Models = ['GOSH*', 'GOSH', 'GOBI*', 'GOBI', 'HGP', 'A3C', 'POND']
-if option == 2:
-	Models = ['GOSH*', 'GOSH', 'SGOBI*', 'SGOBI', 'HGOBI*', 'HGOBI']
+Models = ['singlesimulation', 'multiplesimulation_5', 'multiplesimulation_10'] 
+
 xLabel = 'Simulation Time (minutes)'
 Colors = ['red', 'blue', 'green', 'orange', 'magenta', 'pink', 'cyan', 'maroon', 'grey', 'purple', 'navy']
 apps = ['yolo', 'pocketsphinx', 'aeneas']

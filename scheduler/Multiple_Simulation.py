@@ -18,6 +18,6 @@ class Multiple_Simulation(Scheduler):
     def placement(self, containerIDs):
         decision = []
         for cid in containerIDs:
-            scores = [self.env.stats.runSimpleSimulation([(cid, hostID)])[0] for hostID, _ in enumerate(self.env.hostlist)]
+            scores = [self.env.stats.runMultipleSimulation([(cid, hostID)])[0] for hostID, _ in enumerate(self.env.hostlist)]
             decision.append((cid, np.argmin(scores)))
-        return decision
+        return decision[:5]

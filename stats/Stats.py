@@ -164,8 +164,8 @@ class Stats():
 
 		# Multiple SImlation
 
-		def runMultipleSimulation(self, decision): 
-			host_allocation = []; container_allocation = [-1] * len(self.env.hostlist)
+	def runMultipleSimulation(self, decision): 
+		host_allocation = []; container_allocation = [-1] * len(self.env.hostlist)
 		for i in range(len(self.env.hostlist)):
 			host_allocation.append([])
 		for c in self.env.containerlist:

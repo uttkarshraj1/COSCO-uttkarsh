@@ -51,6 +51,7 @@ from scheduler.HGOBI2 import HGOBI2Scheduler
 from scheduler.HSOGOBI import HSOGOBIScheduler
 from scheduler.HSOGOBI2 import HSOGOBI2Scheduler
 from scheduler.Single_Simulation import Single_Simulation
+from scheduler.Multiple_Simulation import Multiple_Simulation
 # Auxiliary imports
 from stats.Stats import *
 from utils.Utils import *
@@ -66,7 +67,7 @@ parser.add_option("-m", "--mode", action="store", dest="mode", default="0",
 opts, args = parser.parse_args()
 
 # Global constants
-NUM_SIM_STEPS = 100
+NUM_SIM_STEPS = 500
 HOSTS = 10  if opts.env == '' else 10
 CONTAINERS = HOSTS
 TOTAL_POWER = 1000
