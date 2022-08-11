@@ -20,4 +20,6 @@ class Multiple_Simulation(Scheduler):
         for cid in containerIDs:
             scores = [self.env.stats.runMultipleSimulation([(cid, hostID)])[0] for hostID, _ in enumerate(self.env.hostlist)]
             decision.append((cid, np.argmin(scores)))
-        return decision[:5]
+        return decision[:10] #Running for multiple decisons like for 10,20,30 & 40 default is set at 10 
+
+        

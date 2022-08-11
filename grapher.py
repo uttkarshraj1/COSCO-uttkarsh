@@ -73,7 +73,7 @@ def mean_confidence_interval(data, confidence=0.90):
 PATH = 'logs/' + env + '/'
 SAVE_PATH = 'results/' + env + '/'
 
-Models = ['singlesimulation', 'multiplesimulation_5', 'multiplesimulation_10'] 
+Models = ['singlesimulation', 'multiplesimulation_10', 'multiplesimulation_20','multiplesimulation_30','multiplesimulation_40'] 
 
 xLabel = 'Simulation Time (minutes)'
 Colors = ['red', 'blue', 'green', 'orange', 'magenta', 'pink', 'cyan', 'maroon', 'grey', 'purple', 'navy']
