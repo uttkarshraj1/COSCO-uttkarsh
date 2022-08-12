@@ -51,8 +51,9 @@ To run the Multi_Simulation/Single_Simulation  technique , install required pack
 python3 install.py
 
 To run the code with the required scheduler, modify line 106 of `main.py` to one of the several options Single_Simulation, Multiple_Simulation
+''
 scheduler = Multiple_Simulation()
-
+''
 To run the simulator, use the following command
 python3 main.py
 
