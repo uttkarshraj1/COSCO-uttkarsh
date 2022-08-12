@@ -39,16 +39,6 @@ COSCO is an AI based coupled-simulation and container orchestration framework fo
 
 ## Advantages of Multi_Simulation technique
 1. Hassle free development of AI based scheduling algorithms in integrated edge, fog and cloud infrastructures.
-2. Provides seamless integration of scheduling policies with simulated back-end for enhanced decision making.
-3. Supports container migration physical deployments (not supported by other frameworks) using CRIU utility.
-4. Multiple deployment support as per needs of the developers. (Vagrant VM testbed, VLAN Fog environment, Cloud based deployment using Azure/AWS/OpenStack)
-5. Equipped with a smart real-time graph generation of utilization metrics using InfluxDB and Grafana.
-6. Real time metrics monitoring, logging and consolidated graph generation using custom Stats logger.
-
-The basic architecture of COSCO has two main packages: <br>
-**Simulator:** It's a discrete event simulator and runs in a standalone system. <br>
-**Framework:** It’s a kind of tool to test the scheduling algorithms in a physical(real time) fog/cloud environment with real world applications.
-
 
 
 
@@ -57,18 +47,13 @@ We present two
 
 
 ## Quick Start Guide
-To run the COSCO framework, install required packages using
-```bash
+To run the Multi_Simulation/Single_Simulation  technique , install required packages using
 python3 install.py
-```
-To run the code with the required scheduler, modify line 106 of `main.py` to one of the several options including LRMMTR, RF, RL, RM, Random, RLRMMTR, TMCR, TMMR, TMMTR, GA, GOBI.
-```python
-scheduler = GOBIScheduler('energy_latency_'+str(HOSTS))
-```
+
+To run the code with the required scheduler, modify line 106 of `main.py` to one of the several options Single_Simulation, Multiple_Simulation
+scheduler = Multiple_Simulation()
 
 To run the simulator, use the following command
-```bash
 python3 main.py
-```
 
 
