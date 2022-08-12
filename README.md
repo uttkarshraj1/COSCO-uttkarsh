@@ -37,7 +37,7 @@ COSCO is an AI based coupled-simulation and container orchestration framework fo
 <img src="https://github.com/imperial-qore/COSCO/blob/master/wiki/COSCO.jpg" width="900" align="middle">
 
 
-## Advantages of COSCO
+## Advantages of Multi_Simulation technique
 1. Hassle free development of AI based scheduling algorithms in integrated edge, fog and cloud infrastructures.
 2. Provides seamless integration of scheduling policies with simulated back-end for enhanced decision making.
 3. Supports container migration physical deployments (not supported by other frameworks) using CRIU utility.
