@@ -82,36 +82,6 @@ You can directly run tests on the results using a Gitpod Workspace without needi
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/imperial-qore/COSCO/)
 
-## Wiki
-Access the [wiki](https://github.com/imperial-qore/COSCO/wiki) for detailed installation instructions, implementing a custom scheduler and replication of results. All execution traces and training data is available at [Zenodo](https://zenodo.org/record/4897944) under CC License.
-
-## Links
-| Items | Contents | 
-| --- | --- |
-| **Paper** | https://ieeexplore.ieee.org/document/9448450 (with the "Code Reviewed Badge") |
-| **Pre-print** | https://arxiv.org/pdf/2104.14392.pdf |
-| **Documentation** | https://github.com/imperial-qore/COSCO/wiki |
-| **Video** | https://youtu.be/RZOWTj0rfBQ |
-| **Tutorial** | https://www.youtube.com/playlist?list=PLN_nzHzuaOBQijEwy2Fy8c09-dWYVe4XO | 
-| **ICPE Tutorial** | https://youtu.be/osjpaNmkm_w |
-| **Extensions** | QoS aware scheduling ([TPDS'22](https://arxiv.org/abs/2112.07269), [code](https://github.com/imperial-qore/COSCO/tree/workflow)), Energy aware sustainable computing ([JSS'21](https://www.sciencedirect.com/science/article/abs/pii/S0164121221002211), [code](https://github.com/imperial-qore/COSCO/tree/ggcn)), EdgeAI ([SIGMETRICS'21 Poster](https://arxiv.org/abs/2110.04841), [NeurIPS'21 Workshop](https://arxiv.org/abs/2110.02912)) and fault-tolerance ([INFOCOM'22](https://arxiv.org/abs/2112.02292), [code](https://github.com/imperial-qore/PreGAN)) |
-| **Contact**| Shreshth Tuli ([@shreshthtuli](https://github.com/shreshthtuli))  |
-| **Funding**| Imperial President's scholarship, H2020-825040 (RADON) |
-
-## Cite this work
-Our work is published in IEEE TPDS journal. Cite using the following bibtex entry.
-```bibtex
-@article{tuli2021cosco,
-  author={Tuli, Shreshth and Poojara, Shivananda R. and Srirama, Satish N. and Casale, Giuliano and Jennings, Nicholas R.},
-  journal={IEEE Transactions on Parallel and Distributed Systems}, 
-  title={{COSCO: Container Orchestration Using Co-Simulation and Gradient Based Optimization for Fog Computing Environments}}, 
-  year={2022},
-  volume={33},
-  number={1},
-  pages={101-116},
-}
-```
-## License
 
 BSD-3-Clause. 
 Copyright (c) 2021, Shreshth Tuli.
