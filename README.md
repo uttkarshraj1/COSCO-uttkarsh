@@ -1,4 +1,4 @@
-<h1 align="center">COSCO Framework</h1>
+<h1 align="center">Enhancing QoS score for Fog Computing</h1>
 <div align="center">
   <a href="https://github.com/uttkarshraj1/COSCO-uttkarsh/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-red.svg" alt="License">
