@@ -102,9 +102,9 @@ def initalizeEnvironment(environment, logger):
 	else: 
 		workload = BWGD2(NEW_CONTAINERS, 1.5)
 	
-	# Initialize scheduler
-	''' Can be LRMMTR, RF, RL, RM, Random, RLRMMTR, TMCR, TMMR, TMMTR, GA, GOBI (arg = 'energy_latency_'+str(HOSTS)) '''
-	scheduler = Single_Simulation()
+	# Initializing the scheduler
+	''' Can be Multiple_Simulation or Single_Simulation '''
+	scheduler = Multiple_Simulation()
 
 	# Initialize Environment
 	hostlist = datacenter.generateHosts()
