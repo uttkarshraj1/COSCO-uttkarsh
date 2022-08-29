@@ -1,4 +1,4 @@
-<h1 align="center">Enhancing QoS score for Fog Computing</h1>
+<h1 align="center">TESCO: Multiple Simulations based AI-augmented Fog Computing for QoS Optimization</h1>
 <div align="center">
  
    <a>
